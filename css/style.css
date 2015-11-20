@@ -1,0 +1,384 @@
+body {
+    overflow-x:hidden;
+}
+table {
+    background-color: #F5F5F5;
+}
+.pl-0{
+    padding-left: 0px;
+}
+.pr-0{
+    padding-right: 0px;
+}
+.logo {
+    padding: 20px 0;
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{ 
+    box-shadow:0 0 0; 
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.header-bar {
+    background-color: #f5f5f5;
+    position: relative;
+    height: 62px;
+}
+.header-bar input {
+    height: 36px;
+}
+.header-links a {
+    position: relative;
+}
+.search-bar {
+    position: relative;
+    padding: 10px;
+    background-color: #ededed;
+    width: 100%;
+    display: inline-block;
+}
+.equipment-detail-header ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 12px;
+    font-size: 18px;
+}
+
+.menu {
+    background-color: blue;
+    float: left;
+   // width: 170px;
+    //height: 700px;
+   //    padding-top: 50px;
+    position: fixed;
+}
+
+.equipment-detail-header ul li a {
+    text-decoration: none;
+}
+.equipment-detail-header {
+    position: relative;
+    margin-top: 15px;
+}
+.list-group a {
+    padding: 12px 15px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid #dddddd;
+    border-left: 1px solid transparent;
+}
+.list-group a i{
+    padding-right: 10px;
+    color: #555555;
+}
+.equipment-detail-header ul {
+    padding-left: 0px;
+}
+.back-btn {
+    cursor: pointer;
+    background-color: #2A6496;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+.back-btn:hover {
+    cursor: pointer;
+    background-color: #2A6496;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 1;
+}
+.list-group {
+
+}
+a.list-group-item {
+    font-size: 16px;
+    color: #4B92D4;
+} 
+.header-links {
+    text-align: right;
+}
+#imaginary_container input{
+    border: 1px solid #E5E5E5;
+    box-shadow: inset 0px 1px 5px 1px #e9e9e9;
+    border-radius: 5px;
+    color: #9E9E9E;
+}
+h4.equipment_head{
+    background-color: #dddddd;
+    padding: 5px 15px;
+    margin-bottom: 0px;
+}
+.select_by_region span{
+    color: #4C92D7;
+}
+.notification{
+    text-align: right;
+}
+.notification i{
+    color: #555555;
+    font-size: 20px;
+}
+.notification a {
+    position: relative;
+}
+.notification a:hover{
+    text-decoration: none;
+}
+.notification a span.notification-count{
+    position: absolute;
+    top: -16px;
+    right: -3px;
+    background-color: #4C92D0;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    line-height: 18px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 11px;
+}
+.search-notification{
+    padding-top:15px; 
+}
+.modal-body img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.loader{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index: 99999;
+}
+.loader:after, body.pageload:after{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    content: '';
+    background-image: url("http://code.jquery.com/mobile/1.4.2/images/ajax-loader.gif");    
+    background-repeat: no-repeat;
+    background-position: center  center;
+    height: 70px;
+    width: 70px;
+    margin: -35px 0 0 -35px;
+    background-color: #fff; 
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    -o-border-radius:50%;
+    border-radius:50%;
+    box-shadow:0 0 15px #b4c4ea;
+    -moz-box-shadow:0 0 15px #b4c4ea;
+    -webkit-box-shadow:0 0 15px #b4c4ea;
+    z-index: 10;
+}
+@media only screen and (max-width: 768px) {
+
+    .media-css {
+        position: relative;
+        margin-top: 0px;
+    }
+
+}
+
+.queue {
+    background-color:mediumseagreen;
+    font-size: 22px;
+}
+
+.headings {
+    font-size: 18px;
+    background-color: darkseagreen;
+}
+
+.list {
+    cursor: pointer;
+    padding-top:30px;
+}
+
+.queue-main {
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 2px gray;
+}
+
+.div-list div:nth-child(odd) {
+     background: darkseagreen;
+}
+
+.customer-heading {
+    font-size:22px;
+    background-color: darkseagreen;
+}
+
+.btn-save {
+    background-color: darkseagreen;
+}
+
+
+.menu {
+    background-color: lightcyan;
+    height:100%;
+    padding-top: 40px;
+    fot-color: darkseagreen;
+ 
+}
+
+.datepicker .dropdown-menu {
+   left: auto !important;
+   right: 0px;
+ }
+
+.header {
+    font-size: 12px;
+    height: 80px;
+    background-color:lightcyan;
+    z-index: 100;
+    line-height: 54px;
+    margin-bottom: 1px;
+    width: 100%;
+}
+
+.logo {
+    float: left;
+    padding: 0 20px;
+}
+
+h4 {
+    font-size: 20px;
+    color: darkslategray;
+}
+.spacer5 {
+    height: 5px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer10 {
+    height: 10px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer15 {
+    height: 15px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer20 {
+    height: 20px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer25 {
+    height: 25px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer30 {
+    height: 30px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer35 {
+    height: 35px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer40 {
+    height: 40px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer45 {
+    height: 45px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer50 {
+    height: 50px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer100 {
+    height: 100px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer200 {
+    height: 200px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}

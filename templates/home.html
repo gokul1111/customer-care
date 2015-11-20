@@ -1,0 +1,38 @@
+ <div class="container equipment-list">
+	<div class="row">
+		<div class="col-md-5 col-sm-5 queue-main">
+		<div class="panel-heading text-center queue">CallQueue</div>
+			<div class="spacer10"></div>
+			<div class="col-md-6 col-sm-6 text-center headings">
+				<span>Name</span>
+			</div>
+			<div class="col-md-6 col-sm-6 text-center headings">
+				<span>Time</span>
+			</div>
+			<div class = "div-list">
+			 <div class="list" ng-repeat="call in callQueue" ng-click= "getCustomerByCall(call)">
+				<span class="col-md-6 col-sm-6 text-center">{{call.name}}</span>
+				<span class="col-md-6 col-sm-6 text-center">{{call.time}}</span>
+			 </div>
+			</div>
+		  </div>
+		  <div class="col-md-offset-1 col-md-5 col-sm-5 queue-main">
+		  <div class="panel-heading text-center queue">EmailQueue
+		  </div>
+		  	<div class="spacer10"></div>
+			<div class="col-md-6 col-sm-6 text-center headings" >
+				<span>Name</span>
+			</div>
+			<div class="col-md-6 col-sm-6 text-center headings" >
+				<span >Time</span>
+			</div>
+			<div class="div-list">
+			<div class="list" ng-repeat="email in emailQueue" ng-click= "getCustomerByEmail(email)">
+				<span class="col-md-6 col-sm-6 text-center">{{email.name}}</span>
+				<span class="col-md-6 col-sm-6 text-center">{{email.time}}</span>
+			</div>
+			</div>
+          </div>
+     </div>
+   </div>
+</div> 

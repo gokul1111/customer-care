@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Employee Directory</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link href="../css/bootstrap.css" rel="stylesheet"/>
+    <link href="../css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                <script type="text/javascript" src="../js/lib/bootstrap.js"></script>
+    </head>
+
+    <body>
+
+      <h1>Certificate</h1>
+      <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Certificate Name</th>
+                            <th>Expiry Date</th>
+                            <th>View</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody> 
+                </table>
+            </div>
+<script type="text/javascript">
+$(document).ready(function(){
+ var imageurl;
+var key=localStorage.getItem('id');
+
+var db;
+var databaseName =  "Certificate"; 
+var databaseVersion = "1.0";
+var databaseDisplayName = "CertificateDatabase";
+var databaseSize =  2 * 1024 * 1024;
+//Accessing with HTML5 local database
+db = window.openDatabase(databaseName, databaseVersion , databaseDisplayName, databaseSize);    
+
+   db.transaction(function(tx) {
+            tx.executeSql("select * from certificate_table where certificate_resid='"+key+"';", [], function(tx, res) {
+            for (var i = 0; i <= res.rows.length; i++) 
+      {
+            
+            var cert_id = res.rows.item(i).certificate_image;    
+              var row = res.rows.item(i).certificate_date;
+              var row1 = res.rows.item(i).certificate_category;
+            //  var image = res.rows.item(i).certificate_image;
+              $(".table-responsive table tbody").append("<tr><td>"+row1+"</td><td>"+row+"</td><th><a href='javascript:void(0)' class='btn btn-sm btn-primary cert-image' id='"+cert_id+"' data-toggle='modal' data-target='#myModal'>view</a></th></tr>");
+              }
+               
+            });
+   });
+   $("body").on("click",".cert-image",function(){
+    var image_id = $(this).attr("id");
+      localStorage.setItem('image_id', image_id);
+      imageurl="data:image/jpeg;base64,"+localStorage.getItem('image_id');
+      $('#imageid').attr('src',imageurl);
+   });      
+  
+});
+</script>
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+       
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img id="imageid" alt=''>
+        </div>
+      </div>
+    </div>
+  </div>             
+ </body>
+</html>
