@@ -1,4 +1,4 @@
-var app = angular.module('Auth', ['ngCookies', 'ngRoute', 'ui.filters', 'mgcrea.ngStrap']);
+var app = angular.module('Auth', ['ui.bootstrap','ngCookies', 'ngRoute', 'ui.filters', 'mgcrea.ngStrap']);
 app.config(function($routeProvider) {
 $routeProvider
   .when('/home', {
@@ -14,7 +14,7 @@ $routeProvider
  });
 });
 
-$("#support").on("click", function(){
+/*$("#support").on("click", function(){
 
   alert("The page is under progress");
 
@@ -30,4 +30,4 @@ $("#profile").on("click", function(){
 
   alert("The page is under progress");
 
-});
+});*/

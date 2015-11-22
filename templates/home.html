@@ -1,38 +1,110 @@
  <div class="container equipment-list">
 	<div class="row">
-		<div class="col-md-5 col-sm-5 queue-main">
+		<div class="col-md-5 col-xs-12 queue-main">
 		<div class="panel-heading text-center queue">CallQueue</div>
 			<div class="spacer10"></div>
-			<div class="col-md-6 col-sm-6 text-center headings">
-				<span>Name</span>
-			</div>
-			<div class="col-md-6 col-sm-6 text-center headings">
-				<span>Time</span>
-			</div>
+			<span class="col-md-6 col-xs-6 text-center headings">
+				Name
+      </span>
+			<span class="col-md-6 col-xs-6 text-center headings">
+				Time
+      </span>
+		
 			<div class = "div-list">
-			 <div class="list" ng-repeat="call in callQueue" ng-click= "getCustomerByCall(call)">
-				<span class="col-md-6 col-sm-6 text-center">{{call.name}}</span>
-				<span class="col-md-6 col-sm-6 text-center">{{call.time}}</span>
+			 <div class="list" ng-repeat="call in callQueue" ng-click= "getCustomerByCall(call.id); customerDetails()">
+				<span class="col-md-6 col-xs-6 text-center">{{call.name}}</span>
+				<span class="col-md-6 col-xs-6 text-center">{{call.time}}</span>
 			 </div>
 			</div>
 		  </div>
-		  <div class="col-md-offset-1 col-md-5 col-sm-5 queue-main">
+		  <div class="col-md-offset-1 col-md-5 col-xs-12 queue-main">
 		  <div class="panel-heading text-center queue">EmailQueue
 		  </div>
 		  	<div class="spacer10"></div>
-			<div class="col-md-6 col-sm-6 text-center headings" >
+			<div class="col-md-6 col-xs-6 text-center headings" >
 				<span>Name</span>
 			</div>
-			<div class="col-md-6 col-sm-6 text-center headings" >
+			<div class="col-md-6 col-xs-6 text-center headings" >
 				<span >Time</span>
 			</div>
 			<div class="div-list">
-			<div class="list" ng-repeat="email in emailQueue" ng-click= "getCustomerByEmail(email)">
-				<span class="col-md-6 col-sm-6 text-center">{{email.name}}</span>
-				<span class="col-md-6 col-sm-6 text-center">{{email.time}}</span>
+			<div class="list" ng-repeat="email in emailQueue" ng-click= "getCustomerByEmail(email.id)">
+				<span class="col-md-6 col-xs-6 text-center">{{email.name}}</span>
+				<span class="col-md-6 col-xs-6 text-center">{{email.time}}</span>
 			</div>
 			</div>
           </div>
      </div>
    </div>
-</div> 
+
+   <div class="spacer50"></div>
+
+  <div>
+  <alert id="alert" ng-repeat="alert in alerts" type="success" close="closeAlert($index)">{{alert.msg}}</alert>
+</div>
+
+<div collapse="isDetailsCollapsed" id="customer-details">
+     <div class="container equipment-list">
+    <div class="row">
+        <div class="col-md-3 col-xs-12 queue-main">
+        <div class="panel-heading text-center customer-heading">{{customerName}}</div>
+            <div class="col-md-12 col-xs-12">
+            <label class="col-md-4 col-xs-4">Services:</label>
+                <div class="col-md-4 col-xs-6" >
+                 <div class="col-md-12 col-xs-12 padding-0" ng-repeat = "service in customerServices">
+                    {{service}}
+                 </div>
+                </div>  
+            </div>
+            <div class="col-md-12 col-xs-12">
+            <label class="col-md-4 col-xs-4">Account:</label> 
+             <div class="col-md-4 col-xs-6" >
+             {{customerAccount}}
+             </div>
+            </div>
+            <div class="col-md-12 col-xs-12">
+            <label class="col-md-5 col-xs-4">Payments:</label> 
+            <div class="col-md-5 col-xs-6" >
+             {{customerPayments}}
+             </div>
+            </div>
+        </div>
+        <div class="col-md-offset-1 col-md-3 col-xs-12 queue-main">
+          <div class="panel-heading text-center customer-heading" >Current Issue</div>
+          <label class="col-md-10 col-xs-12 text-center" style="font-size:18px"> Title 
+          </label>
+          <input type="text" class="col-md-10 col-xs-12 btn btn-default" id="title" name="title" style="align: center; clear: both;" placeholder="Enter issue here" value="{{customerTitle}}" />
+          <label class="col-md-10 col-xs-12 text-center" style="font-size:18px"> Summary 
+          </label>
+          <textarea type="text" class="col-md-10 col-xs-12 btn btn-default" id="summary" name="summary" placeholder="Enter Summary of Issue "> {{customerSummary}}
+          </textarea>
+          <div class="col-md-12 col-sm-12 container" style="padding-top:15px">
+          <button class="col-md-offset-4 col-xs-offset-4 col-md-4 col-xs-4 btn btn-save" ng-click = "issueSave()"> Save</button>
+          </div>
+        </div>
+        <div class="col-md-offset-1 col-md-3 col-xs-12 queue-main input-append date" >
+           <div class="panel-heading text-center customer-heading">Setup Followup</div>
+
+           <div class="col-md-12 col-xs-12">
+           <label class="col-md-5 col-xs-5 text-center" style="font-size:18px"> Date 
+          </label>
+          
+          <div class="datepicker">
+          <input type="text" class=" col-xs-offset-1 col-xs-4 btn work-btn" placeholder="Date" id="date" name="date" ng-model="date" bs-datepicker />
+          </div>
+
+          </div>
+        
+          <div class="col-md-12 col-xs-12">
+          <label class="col-md-5 col-xs-5 text-center" style="font-size:18px"> Time
+          </label>
+          <input type="text" class="col-xs-5 btn work-btn col-xs-offset-1 ng-pristine ng-valid ng-touched" size="8" ng-model="time" name="time" bs-timepicker="" data-time-format="HH:mm" data-length="1" data-minute-step="1" data-arrow-behavior="picker">
+          </div>
+
+          
+              <button class="col-md-offset-4 col-xs-offset-4 col-md-4 col-xs-4 btn btn-save" ng-click = "followUpSave()"> Save</button>
+          
+           </div>
+    </div>
+ </div>
+</div>

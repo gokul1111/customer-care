@@ -1,47 +1,65 @@
 <html ng-app="Auth">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/bootstrap.css" rel="stylesheet"/>
 	<link href="css/font-awesome.min.css" rel="stylesheet"/>
 	<link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
-	<div class="header">
-		<div class="logo" >
-			<h4>Customer Care</h4>
-		</div>
+ <nav class="navbar navbar-default">
+  <div class="container-fluid main-background-color">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h4 class="navbar-brand" href="#/home" style="color:beige" >Customer Care</h4>
+
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+  </div><!-- /.container-fluid -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Dashboard <span class="sr-only">(current)</span></a></li>
+        <li><a  data-animation="am-fade-and-slide-top" bs-modal="modal" data-template="templates/message.html">Schedule</a></li>
+        <li><a  data-animation="am-fade-and-slide-top" bs-modal="modal" data-template="templates/message.html">Profile</a></li>
+        <li><a  data-animation="am-fade-and-slide-top" bs-modal="modal" data-template="templates/message.html">Support</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>	
+<div class="container-fluid">
+	<div class="row">
+	<div class="col-sm-2 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="#/home" id="dashboard" class="font-color" >Dashboard</a></li>
+            <li><a id="schedule" class="font-color" data-animation="am-fade-and-slide-top" bs-modal="modal" data-template="templates/message.html">Schedule</a></li>
+            <li><a id="profile" class="font-color" data-animation="am-fade-and-slide-top" bs-modal="modal" data-template="templates/message.html">Profile</a></li>
+            <li><a id="support" class="font-color" data-animation="am-fade-and-slide-top" bs-modal="modal" data-template="templates/message.html">Support</a></li>
+          </ul>
+        </div>
+	<div class="col-md-9 col-sm-9" ng-view>
 	</div>
-	<div class="col-md-1 col-sm-1 menu" style="float-left" >
-			<div class="compose-container">
-				<a href="#/home" type="button" class="btn btn-save" id="dashboard">Dashboard</a>
-				<div class="spacer10"></div>
-				<input type="button" class="btn btn-save" id="schedule" value="Schedule"/>
-				<div class="spacer10"></div>
-				<input type="button" class="btn btn-save" id="profile" value="Profile" />
-				<div class="spacer10"></div>
-				<input type="button" class="btn btn-save" id="support" value="Support" />
-			</div>
-		</div>
-		<div class="spacer50"></div>
-		<div class="col-md-offset-1 col-md-9 col-sm-9" ng-view>
-		</div>
 	</div>
-	
-	<script type="text/javascript" src="js/lib/angular.js"></script>
-	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="js/lib/angular-route.js"></script>
-	<script type="text/javascript" src="js/lib/angular-cookies.js"></script>
-	<script type="text/javascript" src="js/lib/unique.js"></script>
-	
-	<script type="text/javascript" src="js/lib/jquery.js"></script>
-	<script type="text/javascript" src="js/lib/bootstrap.js"></script>
-	<script type="text/javascript" src="js/lib/ui-utils.js"></script>
-	<script type="text/javascript" src="js/lib/toastr.js"></script>
-	<script type="text/javascript" src="js/lib/angular-strap.js"></script>
-	<script type="text/javascript" src="js/lib/angular-strap.tpl.js"></script>
-	<script type="text/javascript" src="js/app/App.js"></script>
-	<script type="text/javascript" src="js/app/HomeController.js"></script>
-	<script type="text/javascript" src="js/app/CustomerController.js"></script>
-	<script type="text/javascript" src="js/app/CustomerService.js"></script>
-	
+</div>
+
+<script type="text/javascript" src="js/lib/angular.js"></script>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/lib/angular-route.js"></script>
+<script type="text/javascript" src="js/lib/angular-cookies.js"></script>
+<script type="text/javascript" src="js/lib/unique.js"></script>
+<script type="text/javascript" src="js/lib/ui-bootstrap-0.13.0.js"></script>
+<script type="text/javascript" src="js/lib/ui-bootstrap-tpls-0.13.0.js"></script>
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap.js"></script>
+<script type="text/javascript" src="js/lib/ui-utils.js"></script>
+<script type="text/javascript" src="js/lib/angular-strap.js"></script>
+<script type="text/javascript" src="js/lib/angular-strap.tpl.js"></script>
+<script type="text/javascript" src="js/app/App.js"></script>
+<script type="text/javascript" src="js/app/HomeController.js"></script>
+<script type="text/javascript" src="js/app/CustomerService.js"></script>
+
 </body>
 </html>

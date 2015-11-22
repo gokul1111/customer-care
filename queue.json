@@ -6,34 +6,19 @@
        "name":"A Rao",
         "sex":"male",
         "id":"1",
-        "time":"10:30",
-        "services":["voice","data","cable"],
-        "account":"ABCD00001WE003",
-        "payments":"3000",
-        "title":"throat infection",
-        "summary":"Trouble while swallowing, tonsils should be removed."
+        "time":"10:30"
       },
       {
        "name":"S Ramani",
         "sex":"female",
         "id":"2",
-        "time":"11:30",
-        "services":["voice","data","cable"],
-        "account":"ABCD00001WE002",
-        "payments":"3000",
-        "title":"throat infection",
-        "summary":"Trouble while swallowing, tonsils should be removed."
+        "time":"11:30"
       },
       { 
         "name":"Kumuda",
         "sex":"female",
         "id":"3",
-        "time":"12:30",
-        "services":["voice","data","cable"],
-        "account":"ABCD00001WE001",
-        "payments":"3000",
-        "title":"diabetes",
-        "summary":"Suffering from a long time.Trouble keeping sugar levels down.Insulin injections required."
+        "time":"12:30"
       }
 
   ],
@@ -43,34 +28,19 @@
        "name":"A Rao",
         "sex":"male",
         "id":"4",
-        "time":"10:30",
-        "services":["voice","data","cable"],
-        "account":"ABCD00001WE004",
-        "payments":"3000",
-        "title":"throat infection",
-        "summary":"Trouble while swallowing, tonsils should be removed."
+        "time":"10:30"
       },
       {
        "name":"S Ramani",
         "sex":"female",
         "id":"5",
-        "time":"11:30",
-        "services":["voice","data","cable"],
-        "account":"ABCD00001WE005",
-        "payments":"3000",
-        "title":"headache",
-        "summary":"Caused due to stress. caused only in the left part of the head. May lead to migraine."
+        "time":"11:30"
       },
       { 
         "name":"Kumuda",
         "sex":"female",
         "id":"6",
-        "time":"12:30",
-        "services":["voice","data","cable"],
-        "account":"ABCD00001WE006",
-        "payments":"3000",
-        "title":"diabetes",
-        "summary":"Suffering from a long time.Trouble keeping sugar levels down.Insulin injections required."
+        "time":"12:30"
       }
   ]
 

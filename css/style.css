@@ -196,13 +196,13 @@ h4.equipment_head{
 }
 
 .queue {
-    background-color:mediumseagreen;
+    background-color:indianred;
     font-size: 22px;
+    color: beige;
 }
 
 .headings {
     font-size: 18px;
-    background-color: darkseagreen;
 }
 
 .list {
@@ -218,16 +218,16 @@ h4.equipment_head{
 }
 
 .div-list div:nth-child(odd) {
-     background: darkseagreen;
+     background: darksalmon;
 }
 
 .customer-heading {
     font-size:22px;
-    background-color: darkseagreen;
+    background-color: indianred;
 }
 
 .btn-save {
-    background-color: darkseagreen;
+    background-color: indianred;
 }
 
 
@@ -235,8 +235,6 @@ h4.equipment_head{
     background-color: lightcyan;
     height:100%;
     padding-top: 40px;
-    fot-color: darkseagreen;
- 
 }
 
 .datepicker .dropdown-menu {
@@ -263,6 +261,23 @@ h4 {
     font-size: 20px;
     color: darkslategray;
 }
+
+@media (min-width: 767px) {
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar{
+    display: none;
+  }
+}
+
+.modal-backdrop {
+    opacity:0.5;
+}
+
 .spacer5 {
     height: 5px;
     width: 100%;
@@ -363,6 +378,10 @@ h4 {
     display: block;
 }
 
+.font-color {
+    color:indianred;
+}
+
 .spacer100 {
     height: 100px;
     width: 100%;
@@ -381,4 +400,21 @@ h4 {
     padding: 0;
     border: 0;
     display: block;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: white;
+    background-color: #CD5C5C;
+}
+
+.main-background-color {
+    background-color: #CD5C5C;
+}
+
+.navbar-nav {
+    margin: -1px -15px;
+}
+
+.padding-0{
+    padding: 0px !important;
 }
